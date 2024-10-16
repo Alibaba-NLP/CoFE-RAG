@@ -1,0 +1,8 @@
+{
+    "class_name": "LiChunk",
+    "class_file": "liChunk",
+    "file_exclude": ["config.json", "log.txt"],
+    "embed_model_name": "BAAI/bge-large-en-v1.5",
+    "chunk_size": 512,
+    "overlap_size": 100
+}

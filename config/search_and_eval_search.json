@@ -1,0 +1,17 @@
+{
+    "description": "",
+    "datasets": ["docdata"],
+    "start_point": "offline_parse_li_native_ingestion_li_chunk",
+    "save_folder_prefix_list": ["operator", "config_name", "version"],
+    "start_prefix": "",
+    "pipeline":[
+        {
+            "operator": "search",
+            "config_name": "simple_rerank"
+        },
+        {
+            "operator": "eval_search",
+            "config_name": "keyword_match"
+        }
+    ]
+}

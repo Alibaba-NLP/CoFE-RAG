@@ -1,0 +1,17 @@
+{
+    "description": "",
+    "datasets": ["docdata"],
+    "start_point": "source_files",
+    "save_folder_prefix_list": ["operator", "config_name", "version"],
+    "start_prefix": "",
+    "pipeline":[
+        {
+            "operator": "parse",
+            "config_name": "parsing"
+        },
+        {
+            "operator": "chunk",
+            "config_name": "chunking"
+        }
+    ]
+}

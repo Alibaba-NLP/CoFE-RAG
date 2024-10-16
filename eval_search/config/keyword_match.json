@@ -1,0 +1,6 @@
+{
+    "class_name": "ScoredKeywordMatchEval",
+    "class_file": "scoredKeywordMatchEval",
+    "top_k": 4,
+    "eval_error_ratio": 0
+}

@@ -1,0 +1,9 @@
+{
+    "class_name": "RetrieverGenerator",
+    "class_file": "retrieverGenerator",
+    "remove_if_exists": false,
+    "thread_num": 1,
+    "base_llm": "gpt-4o",
+    "search_cache_file": "/recall_results.json",
+    "top_n": 1
+}

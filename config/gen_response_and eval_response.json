@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "datasets": ["docdata"],
+    "start_point": "search_simple_hybrid_rerank_bge_en",
+    "save_folder_prefix_list": ["operator", "config_name"],
+    "start_prefix": "",
+    "pipeline": [
+        {
+            "operator": "gen_response",
+            "config_name": "gpt_use_search_cache"
+        },
+        {
+            "operator": "eval_response",
+            "config_name": "eval_gpt4.json",
+            "version": "gpt4"
+        }
+    ]
+}

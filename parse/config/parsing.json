@@ -1,0 +1,8 @@
+{
+    "class_name": "LiDefaultParser",
+    "class_file": "liDefaultParser",
+    "input_file_suffix": ["epub", "docx",  "doc", "pdf", "csv", "hwp", "ipynb", "jpeg", "jpg", "mbox", "md", "mp3", "mp4", "png", "ppt", "pptx", "pptm", "xlx", "xlsx"],
+    "file_exclude": ["config.json", "log.txt"],
+    "output_format": "document",
+    "copy_file_if_format_not_in_suffix_list": true
+}

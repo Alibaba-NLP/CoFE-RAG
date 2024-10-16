@@ -1,0 +1,6 @@
+{
+    "class_name": "LiNativeEvaluator",
+    "class_file": "liNativeEvaluator",
+    "base_llm": "gpt-4",
+    "thread_num": 1
+}
