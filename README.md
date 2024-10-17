@@ -25,3 +25,14 @@ python run_pipeline.py config/search_and_eval_search.json`
 ```python
 python run_pipeline.py config/gen_response_and_eval_response.json
 ```
+
+## Automatic Data Generation
+### Query Generation
+```python
+python ./data_generation/query_generation.py
+```
+
+### Multi-granularity Keyword Generation
+```python
+python ./data_generation/keyword_generation.py
+```
