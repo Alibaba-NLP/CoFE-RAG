@@ -1,5 +1,5 @@
 # CoFE-RAG: A Comprehensive Full-chain Evaluation Framework for Retrieval-Augmented Generation with Enhanced Data Diversity
-This is the repo for paper: CoFE-RAG: A Comprehensive Full-chain Evaluation Framework for Retrieval-Augmented Generation with Enhanced Data Diversity.
+This is the repo for paper: [CoFE-RAG: A Comprehensive Full-chain Evaluation Framework for Retrieval-Augmented Generation with Enhanced Data Diversity](https://arxiv.org/abs/2410.12248).
 
 
 
@@ -27,6 +27,7 @@ python run_pipeline.py config/gen_response_and_eval_response.json
 ```
 
 ## Automatic Data Generation
+If you want to construct evaluation data using custom documents, please refer to the following process.
 ### Query Generation
 ```python
 python ./data_generation/query_generation.py
