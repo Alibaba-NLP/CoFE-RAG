@@ -37,3 +37,16 @@ python ./data_generation/query_generation.py
 ```python
 python ./data_generation/keyword_generation.py
 ```
+
+## Citation
+
+If you found this work useful, consider citing our paper as followed:
+
+```bigquery
+@article{liu2024cofe,
+  title={CoFE-RAG: A Comprehensive Full-chain Evaluation Framework for Retrieval-Augmented Generation with Enhanced Data Diversity},
+  author={Liu, Jintao and Ding, Ruixue and Zhang, Linhao and Xie, Pengjun and Huang, Fie},
+  journal={arXiv preprint arXiv:2410.12248},
+  year={2024}
+}
+```
