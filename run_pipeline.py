@@ -4,14 +4,6 @@ import os
 import logging
 from utils import import_class
 
-accepted_prev_operators = {
-    "offline_parse": ["offline_parse"],
-    "ingestion": ["offline_parse"],
-    "search": ["ingestion"],
-    "eval_search": ["search"],
-    "gen_response": ["search", "ingestion"],
-    "eval_response": ["gen_response"]
-}
 # set logging level
 logging.basicConfig(level=logging.INFO)
 log_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -32,14 +24,6 @@ for dataset in config["datasets"]:
         current_prefix.append(config["start_prefix"])
     for operation in config["pipeline"]:
         operator_name = operation["operator"]
-
-        # check valid pipeline
-        if operator_name not in accepted_prev_operators:
-            logging.error(f"Invalid operator {operator_name}")
-            exit(1)
-        if prev_operators != '' and prev_operators not in accepted_prev_operators[operator_name]:
-            logging.error(f"Invalid pipeline from {prev_operators} to {operator_name}")
-            exit(1)
 
         config_name = operation["config_name"]
         operator_config_path = os.path.join(operator_name, "config", f"{config_name}.json")
