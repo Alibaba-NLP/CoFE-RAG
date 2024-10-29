@@ -1,0 +1,10 @@
+{
+    "class_name": "SimpleSearcher",
+    "class_file": "simpleSearcher",
+    "remove_if_exists": false,
+    "thread_num": 1,
+    "rerank_size": 30,
+    "vector_ratio": 1,
+    "embed_model_name": "BAAI/bge-large-en-v1.5",
+    "rerank_model": "BAAI/bge-reranker-large"
+}
