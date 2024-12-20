@@ -3,6 +3,7 @@ import requests
 import json
 import time
 import re
+import tiktoken
 
 url = 'https://api.openai.com/v1/chat/completions'
 headers = {
@@ -10,7 +11,12 @@ headers = {
             'Content-Type': 'application/json',
         }
 
-def split_paragraph(paragraph, max_length=1024):
+def encode_string_by_tiktoken(content, model_name = "gpt-4o"):
+    ENCODER = tiktoken.encoding_for_model(model_name)
+    tokens = ENCODER.encode(content)
+    return tokens
+
+def split_paragraph(paragraph, max_length=1200):
     sentences = re.split(r'([。！？])', paragraph)
     if sentences[-1] == '':
         sentences = sentences[:-1]
@@ -18,7 +24,7 @@ def split_paragraph(paragraph, max_length=1024):
     result = []
     current_chunk = ''
     for sentence in sentences:
-        if len(current_chunk) + len(sentence) > max_length:
+        if len(encode_string_by_tiktoken(current_chunk)) + len(encode_string_by_tiktoken(sentence)) > max_length:
             result.append(current_chunk.strip())
             current_chunk = sentence
         else:
